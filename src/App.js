@@ -2,8 +2,6 @@ import './App.css';
 import SetTimer from "./components/SetTimer";
 import React, {Component} from 'react';
 
-const audio = document.getElementById("beep");
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -78,7 +76,7 @@ class App extends Component {
         }
     }
     handleBreakDecrease = () => {
-        const {breakCount, currentTimer, isPlay} = this.state;
+        const {breakCount, currentTimer} = this.state;
         if (breakCount > 1 && currentTimer === 'Session') {
             this.setState({
                 breakCount: breakCount - 1,
